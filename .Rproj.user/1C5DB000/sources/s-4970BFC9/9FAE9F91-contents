@@ -1,0 +1,44 @@
+---
+title: "FAR package usage examples"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{fars_details}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(my.far.pkg)
+```
+
+# Package Description
+`my.far.pkg` package reads data of Fatality Analysis Reporting System (FARS)
+from the National Highway Traffic Safety.
+Also, some map plotting functionality provided.
+
+## Loading
+`library(my.far.pkg)`
+
+## Function `fars_summarize_years`
+
+Summary info per each year-month.
+
+```{r}
+plot(fars_summarize_years(2013))
+fars_summarize_years(c(2014, 2015))
+```
+
+## Function `fars_map_state`
+
+Plot accidents onto the map.
+
+```{r}
+plot(fars_summarize_years(2014))
+```

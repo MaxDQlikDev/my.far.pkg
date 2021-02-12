@@ -1,0 +1,51 @@
+\name{fars_read}
+\alias{fars_read}
+\title{fars_read}
+\usage{
+fars_read('accident_2014.csv.bz2')
+}
+
+\description{
+ Reads in datafiles
+ Reads data from .csv files from the US
+ National Highway Traffic Safety Administration's Fatality Analysis
+ Reporting System (FARS),
+ https://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars
+ - public yearly data, regarding fatal injuries suffered in motor vehicle traffic crashes
+ and converts them into data frame tbl
+}
+
+\examples{
+  library(dplyr)
+  library(readr)
+  yr <- 2014
+  data <- yr %>%
+  make_filename %>%
+  fars_read
+  head(data)
+}
+
+
+
+
+
+
+ @importFrom readr read_csv
+ @importFrom dplyr tbl_df
+
+ @param filename A character string with the name/path to file to read
+  function will rise an error if input data file doesn't exist or path to it is incorrectly specified
+
+ @return A data frame tbl with data readed from the csv file, or an error if the
+   file does not exists.
+
+ @examples
+ \dontrun{
+   library(dplyr)
+   library(readr)
+   yr <- 2014
+   data <- yr %>%
+   make_filename %>%
+   fars_read
+ head(data)
+# }

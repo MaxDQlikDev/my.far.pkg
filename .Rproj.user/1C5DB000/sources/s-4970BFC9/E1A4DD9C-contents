@@ -1,0 +1,17 @@
+Package: my.far.pkg
+Type: Package
+Title: Package to read data of Fatality Analysis Reporting System (FARS) from the National Highway Traffic Safety
+Version: 0.1.0
+Author: Max Dunaevsky
+Maintainer: Max Dunaievskyi <MaxDunaievskyi@gmail.com>
+Description: reads data of Fatality Analysis Reporting System (FARS) from the National Highway Traffic Safety.
+    Also, some map plotting functionality provided.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+Imports: magrittr, dplyr, tidyr, readr, maps
