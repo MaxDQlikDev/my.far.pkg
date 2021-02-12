@@ -32,8 +32,7 @@ library(my.far.pkg)
 
 Summary info per each year-month:
 
-```{r example}
-plot(fars_summarize_years(2013))
+```{r summary, eval = FALSE}
 fars_summarize_years(c(2014, 2015))
 ```
 
@@ -41,6 +40,6 @@ fars_summarize_years(c(2014, 2015))
 
 Plot accidents onto the map.
 
-```{r cars}
+```{r plot, eval = FALSE}
 plot(fars_summarize_years(2014))
 ```
